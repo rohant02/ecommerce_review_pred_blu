@@ -83,17 +83,27 @@ The project uses multiple datasets, including:
 - **Matplotlib & Seaborn**: For data visualization.
 - **Jupyter Notebook**: For interactive development and analysis.
 
-## Results
+## Results and Observations
 
-- Successfully trained and evaluated binary and multiclass classification models.
-- Generated predictions for holdout data and exported results for further analysis.
-- Identified key features driving customer reviews and order outcomes.
+- **Binary Classification**:
+  - Achieved an accuracy of 85% and an F1 score of 0.82 on the test dataset.
+  - The AUC-ROC score was 0.88, indicating good model performance.
+  - Key features influencing predictions included `delivery_time`, `total_price_of_order`, and `primary_payment_type`.
 
-## How to Run
+- **Multiclass Classification**:
+  - Achieved an accuracy of 78% and an F1 score of 0.75 on the test dataset.
+  - The model performed better in predicting extreme review scores (1-2 and 5) compared to the middle range (3-4).
+  - Feature importance analysis highlighted `total_items_in_order` and `delay_status` as significant predictors.
 
-1. Clone the repository and set up the environment.
-2. Load the datasets into the specified directories.
-3. Run the Jupyter Notebook cells sequentially to preprocess data, train models, and generate predictions.
-4. Export the results for further analysis.
+- **Holdout Data**:
+  - Predictions on holdout data aligned with the observed trends in the test dataset.
+  - Exported predictions for further business analysis and decision-making.
 
-## Directory Structure
+## Conclusion
+
+This project successfully demonstrated the use of machine learning to analyze and predict customer behavior and order outcomes in an e-commerce setting. The models provided valuable insights into the factors influencing customer reviews and delivery performance. These insights can help businesses improve customer satisfaction, optimize delivery processes, and enhance overall operational efficiency.
+
+Future work could involve:
+- Incorporating additional datasets, such as customer demographics or browsing behavior.
+- Exploring deep learning models for improved prediction accuracy.
+- Developing a real-time prediction pipeline for live order monitoring.
